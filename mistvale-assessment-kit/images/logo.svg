@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 44" width="352" height="88" role="img" aria-label="Mistvale Tea Co.">
+  <g>
+  <path d="M3 27.5C9.5 17 16.5 14.8 22.6 21.9c2.9 3.4 7 5 13.4 2.2V30.5H3Z" fill="#2f5a3a"/>
+  <path d="M4 29.9h32" stroke="#f6f1e7" stroke-width="3.1" stroke-linecap="round" opacity=".92"/>
+  <path d="M1.5 34.2C7.6 28.4 14.6 27.9 20.7 32.4c4.2 3.1 9.4 3.8 18.8-0.2V40H1.5Z" fill="#4f7942"/>
+  <path d="M30.3 5.6c4.2 2.1 5.3 7.5 1.1 11.7-4.3-2.2-5.4-7.6-1.1-11.7Z" fill="#4f7942"/>
+  <path d="M30.4 17.3V7.4" stroke="#f6f1e7" stroke-width="1.15" stroke-linecap="round" opacity=".85"/>
+</g>
+  <text x="50" y="30" font-family="Fraunces, 'Playfair Display', Georgia, serif" font-size="27" font-weight="600" letter-spacing="-0.4" fill="#1f3d2b">Mistvale</text>
+  <text x="51" y="40" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.4" letter-spacing="3.1" fill="#4f7942">TEA CO.</text>
+</svg>
