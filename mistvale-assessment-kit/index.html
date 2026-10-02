@@ -577,7 +577,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .field .hint { display: block; margin-top: var(--s-1); font-size: var(--fs-micro); color: var(--text-faint); }
 
-input[type='text'], input[type='email'], input[type='tel'], input[type='number'], input[type='search'], select {
+input[type='text'], input[type='email'], input[type='tel'], input[type='number'], input[type='search'], input[type='password'], select {
   width: 100%;
   min-height: 48px;
   padding: 10px var(--s-3);
@@ -590,6 +590,9 @@ input[type='text'], input[type='email'], input[type='tel'], input[type='number']
 input:hover, select:hover { border-color: var(--leaf); }
 input:focus-visible, select:focus-visible { border-color: var(--tea-green); box-shadow: 0 0 0 3px rgba(217, 150, 43, .35); outline-offset: 1px; }
 input[aria-invalid='true'] { border-color: var(--error); background: var(--error-bg); }
+/* Placeholder text is a hint, but it is still text a shopper has to read, and the browser
+   default is not guaranteed to clear 4.5:1 on our field background. */
+input::placeholder { color: var(--text-faint); opacity: 1; }
 
 select {
   appearance: none;
@@ -1777,7 +1780,7 @@ select {
         <form id="signup-form" novalidate>
           <div class="field">
             <label class="label" for="su-name">Your name</label>
-            <input type="text" id="su-name" name="name" autocomplete="name" aria-describedby="su-name-error">
+            <input type="text" id="su-name" name="name" autocomplete="name" placeholder="e.g. Asha Sen" autocapitalize="off" aria-describedby="su-name-error">
             <p class="field-error" id="su-name-error" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></svg>
               <span></span>
@@ -1785,7 +1788,7 @@ select {
           </div>
           <div class="field">
             <label class="label" for="su-email">Email address</label>
-            <input type="email" id="su-email" name="email" autocomplete="email" placeholder="you@example.com" aria-describedby="su-email-error">
+            <input type="email" id="su-email" name="email" autocomplete="email" placeholder="you@example.com" autocapitalize="off" spellcheck="false" aria-describedby="su-email-error">
             <p class="field-error" id="su-email-error" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></svg>
               <span></span>
@@ -1793,7 +1796,7 @@ select {
           </div>
           <div class="field">
             <label class="label" for="su-password">Password</label>
-            <input type="password" id="su-password" name="password" autocomplete="new-password" aria-describedby="su-password-hint su-password-error">
+            <input type="password" id="su-password" name="password" autocomplete="new-password" placeholder="8 characters or more" autocapitalize="off" spellcheck="false" aria-describedby="su-password-hint su-password-error">
             <p class="hint" id="su-password-hint">At least 8 characters.</p>
             <p class="field-error" id="su-password-error" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></svg>
@@ -1809,7 +1812,7 @@ select {
         <form id="login-form" novalidate>
           <div class="field">
             <label class="label" for="li-email">Email address</label>
-            <input type="email" id="li-email" name="email" autocomplete="email" placeholder="you@example.com" aria-describedby="li-email-error">
+            <input type="email" id="li-email" name="email" autocomplete="email" placeholder="you@example.com" autocapitalize="off" spellcheck="false" aria-describedby="li-email-error">
             <p class="field-error" id="li-email-error" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></svg>
               <span></span>
@@ -1817,7 +1820,7 @@ select {
           </div>
           <div class="field">
             <label class="label" for="li-password">Password</label>
-            <input type="password" id="li-password" name="password" autocomplete="current-password" aria-describedby="li-password-error">
+            <input type="password" id="li-password" name="password" autocomplete="current-password" placeholder="Your password" autocapitalize="off" spellcheck="false" aria-describedby="li-password-error">
             <p class="field-error" id="li-password-error" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.3"/></svg>
               <span></span>

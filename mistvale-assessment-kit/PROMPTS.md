@@ -34,8 +34,13 @@ impressive-looking. Two things you should know before you read it:
 > Continue if you have next steps, or stop and ask for clarification if you are unsure how to
 > proceed.
 
-**Caveat, stated plainly:** I cannot reproduce the first prompt verbatim. It is not in the
-context I am working from any more — I have a summary of what it asked for, not the exact
+**Prompt 4 — the account feature (summarised; same caveat as above).**
+
+> Add accounts to the store: a way to sign up, log in and log out, plus guest checkout for
+> people who do not want an account.
+
+**Caveat, stated plainly:** I cannot reproduce prompts 1 and 4 verbatim. They are not in the
+context I am working from any more — I have a summary of what they asked for, not the exact
 wording. Rather than invent a plausible-looking transcript, I have written the summary above and
 left a space for the real text. **Please paste your original brief into the form**, or paste it
 here and I will add it verbatim.
@@ -54,6 +59,11 @@ For transparency, since the prompt count is so low:
 6. Wrote `test-rules.js`, then `check.js`, then `contrast.js`, then the jsdom shopper tests —
    and fixed what they found. Most of the real bugs in §2 of `NOTES.md` came out of this step,
    not out of the build.
+7. Added the account feature last, after a second reading of the brief confirmed it was an
+   extension and not a requirement — then spent most of that hour on the password handling and
+   on `mutate.js` / `mutate-check.js`, which break the finished page ten and sixteen ways on
+   purpose to prove the tests can actually fail. That step found four checks of mine that were
+   passing without checking anything (§2 of `NOTES.md`).
 
 The equivalent of many small prompts was applied as many small checks.
 
